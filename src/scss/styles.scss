@@ -2,16 +2,36 @@ body{
   background-color:skyblue;
 }
 
-.output-grid{
-  margin: auto;
-  border: solid red 1px;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: auto;
-  height: 400px;
-  width: auto;
+.top{
+  display: flex;
+  justify-content: space-between;
+}
+
+.water-meter{
+  height: 50px;
+  width: 500px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.water{
+  height: 50px;
+  width: 500px;
+  background-color: blue;
+
+}
+
+.grow-area{
+  margin: 500px auto 0 auto;
+  // border: solid red 1px;
+  display:flex;
+  flex-wrap:wrap;
 }
 
 .plant{
   width:100px;
+  align-self:center;
+  margin:20px;
+  transform:scale(1);
+  transition:transform 2s;
 }
