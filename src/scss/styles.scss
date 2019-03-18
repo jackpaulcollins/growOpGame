@@ -1,0 +1,17 @@
+body{
+  background-color:skyblue;
+}
+
+.output-grid{
+  margin: auto;
+  border: solid red 1px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: auto;
+  height: 400px;
+  width: auto;
+}
+
+.plant{
+  width:100px;
+}
