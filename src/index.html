@@ -8,6 +8,9 @@
     <div class="top">
       <div class="top-left">
       <h1>Grow Op</h1>
+      <h5>budget: <span id="budget"></span></h5>
+      <h5>Time until harvest: <span id="time"></span></h5>
+      <button id="harvest" type="button">Harvest</button>
       <form id="userPlantSelection">
         <input id="numPlants" type="number" min="0" max="50">
         <button type="submit" name="button">Purchase</button>
@@ -16,6 +19,9 @@
     <div class="top-right">
       <div class="water-meter">
         <div class="water"></div>
+        <form id="more-water">
+          <button type="submit" name="button">Get more water</button>
+        </form>
       </div>
     </div>
   </div>

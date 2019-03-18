@@ -23,6 +23,8 @@ export class Environment{
     this.numOfPlants = 0;
     this.plantArray=[];
     this.waterTank=500;
+    this.budget=1000;
+    this.time = 1000;
   }
 
   addPlants(size){
@@ -32,16 +34,31 @@ export class Environment{
       this.plantArray.push(plant);
       plantPurchase.push(plant);
       this.numOfPlants++;
+      this.budget -= 100;
     }
     return plantPurchase;
 
   }
 
-  lightsOn(){
-
+  addWater(){
+    const cost = 500 - this.waterTank
+    this.waterTank=500;
+    this.budget -= cost/10
   }
 
-  lightsOff(){
-
+  day(){
+    this.time -= 10;
   }
+
+  harvest(){
+    if (this.time > 0){
+      this.plantArray.forEach((plant)=>{
+      console.log(plant)
+      this.budget+=plant.size*100;
+      });
+      this.plantArray=[];
+    }
+  }
+
+
 }
